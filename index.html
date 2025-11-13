@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Hunny 🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Intro overlay with the birthday card -->
+  <div id="overlay">
+    <div class="overlay-inner">
+      <div class="card">
+        <h1 class="card-title">Happy Birthday Hunny</h1>
+        <p class="card-body">
+          This is just me being a part of your non-lowkey birthday this year hehe. Thank you for being my exploring,
+          bakchodi, music, deep talks and random walks partner. Seeing you grow over this last one year has been truly
+          gratifying. Can't wait to see all the success, happiness and masti this next year brings for. I miss you &lt;3
+        </p>
+        <p class="card-signature">– love, Rabbo</p>
+
+        <button id="start-btn" class="primary-btn">
+          Start the Celebration 🎉
+        </button>
+
+        <div class="how-to">
+          <h2>How to use this birthday page</h2>
+          <ol>
+            <li>Put on your headphones or turn your speakers up.</li>
+            <li>Click <strong>“Start the Celebration”</strong> – the music will start from my favourite part.</li>
+            <li>Watch the Toronto skyline, the cake, and the photo frame come alive.</li>
+            <li>When you’re ready to make a wish, click <strong>“Blow out the candles”</strong>.</li>
+            <li>After that, click <strong>“Cut the cake”</strong> to finish the ritual properly.</li>
+            <li>Take a screenshot or screen-record the page if you want to keep this moment.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main scene -->
+  <div id="scene" class="hidden">
+    <div class="scene-bg"></div>
+
+    <!-- Confetti -->
+    <div id="confetti-container"></div>
+
+    <!-- Center content: cake + photos + mini card -->
+    <div class="scene-content">
+      <!-- Cake block -->
+      <div class="cake-area">
+        <div class="cake-plate"></div>
+        <div class="cake" id="cake">
+          <div class="cake-layer layer-bottom"></div>
+          <div class="cake-layer layer-middle"></div>
+          <div class="cake-layer layer-top"></div>
+
+          <div class="cake-cream cream-bottom"></div>
+          <div class="cake-cream cream-middle"></div>
+          <div class="cake-cream cream-top"></div>
+
+          <div class="candles" id="candles">
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="candle">
+              <div class="candle-body"></div>
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cake-caption">
+          Make a wish before you click <strong>“Blow out the candles”</strong> 🕯️
+        </div>
+      </div>
+
+      <!-- Photo frame slideshow -->
+      <div class="photos-area">
+        <div class="photo-frame">
+          <img src="assets/p1.jpg" alt="Memory 1" class="photo active" />
+          <img src="assets/p2.jpg" alt="Memory 2" class="photo" />
+          <img src="assets/p3.jpg" alt="Memory 3" class="photo" />
+          <img src="assets/p4.jpg" alt="Memory 4" class="photo" />
+          <div class="photo-border-glow"></div>
+        </div>
+        <div class="photo-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <!-- Mini card / instructions on the side -->
+      <div class="side-card">
+        <h2>Birthday Ritual Guide 🎂</h2>
+        <ol>
+          <li><strong>Step 1 – Vibe check:</strong> Let the song and skyline set the mood.</li>
+          <li><strong>Step 2 – Candle time:</strong> Close your eyes, think of your wish, then click <em>“Blow out the candles”</em>.</li>
+          <li><strong>Step 3 – Cake cutting:</strong> After the candles are out, click <em>“Cut the cake”</em>. That’s the official cut.</li>
+          <li><strong>Step 4 – Photo walk:</strong> Watch our photos cycle through the frame and remember all the chaos, walks, and late-night calls.</li>
+          <li><strong>Step 5 – Replay:</strong> If you want to relive it, hit <em>“Replay song”</em> and run it back.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="blow-btn" class="secondary-btn">Blow out the candles 🕯️</button>
+      <button id="cut-btn" class="secondary-btn" disabled>Cut the cake 🍰</button>
+      <button id="replay-btn" class="ghost-btn">Replay song 🔁</button>
+    </div>
+  </div>
+
+  <!-- Hidden YouTube player (audio only) -->
+  <div id="player"></div>
+</body>
+</html>
